@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PATROL – Surplus Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>PATROL</h1>
+  <p>Men's Clothing • Shoes • Accessories</p>
+</header>
+
+<div class="container">
+  <div class="categories">
+    <button class="active" onclick="filterCategory('All', this)">All</button>
+    <button onclick="filterCategory('Shirts', this)">Shirts</button>
+    <button onclick="filterCategory('Shoes', this)">Shoes</button>
+    <button onclick="filterCategory('Accessories', this)">Accessories</button>
+  </div>
+  <div class="products" id="products"></div>
+</div>
+
+<a class="floating-wa" href="https://wa.me/919506066511" target="_blank">💬</a>
+<script src="script.js"></script>
+</body>
+</html>
