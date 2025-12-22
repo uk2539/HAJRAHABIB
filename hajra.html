@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hajra Habib Chikankari</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Authentic Lucknowi Handcrafted Chikankari Kurtis">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>Hajra Habib</h1>
+                <p class="tagline">Lucknowi Chikankari</p>
+            </div>
+
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#products">Collection</a>
+                <a href="#filters">Fabrics</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <h1>Hajra Habib Chikankari</h1>
+            <p>Authentic Lucknowi Handcrafted Chikankari</p>
+            <p class="hero-sub">Since 1987 • Pure Hand Embroidery</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="main-categories" id="products">
+            <h2 class="section-title">Our Collection</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterCategory('All',this)">All Collections</button>
+                <button class="filter-btn" onclick="filterCategory('Long',this)">Long Kurtis</button>
+                <button class="filter-btn" onclick="filterCategory('Short',this)">Short Kurtis</button>
+            </div>
+        </section>
+
+        <section class="filters" id="filters">
+            <h3 class="filter-title">Filter by Fabric</h3>
+            <div class="fabric-buttons">
+                <button class="fabric-btn active" onclick="filterFabric('All',this)">All Fabrics</button>
+                <button class="fabric-btn" onclick="filterFabric('Cotton',this)">Cotton</button>
+                <button class="fabric-btn" onclick="filterFabric('MulMul',this)">MulMul</button>
+                <button class="fabric-btn" onclick="filterFabric('Modal',this)">Modal</button>
+                <button class="fabric-btn" onclick="filterFabric('Reyon',this)">Reyon</button>
+                <button class="fabric-btn" onclick="filterFabric('Georgette',this)">Georgette</button>
+                <button class="fabric-btn" onclick="filterFabric('Chanderi',this)">Chanderi</button>
+            </div>
+        </section>
+
+        <section class="products" id="products-container">
+            <!-- Products will be rendered here -->
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Hajra Habib Chikankari</h3>
+                <p>Authentic Lucknowi Hand Embroidery</p>
+                <p>📞 +91 83030 85804</p>
+                <p>📍 Lucknow, Uttar Pradesh</p>
+            </div>
+
+            <div class="socials">
+                <p>Connect with us:</p>
+                <div class="social-icons">
+                    <a href="https://wa.me/918303085804" target="_blank" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.instagram.com/aesthetic_chikan23/" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="mailto:contact@hajrahabib.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="tel:+918303085804" aria-label="Phone">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>© 2024 Hajra Habib Chikankari. All rights reserved.</p>
+            <p class="craft">Handcrafted with ❤️ in Lucknow</p>
+        </div>
+    </footer>
+
+    <a class="floating-wa" href="https://wa.me/918303085804" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
