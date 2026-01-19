@@ -7,7 +7,8 @@ const products = [
     category: "Long", 
     fabric: "Cotton", 
     image: "images/long-cotton.jpg",
-    description: "Pure cotton with intricate hand embroidery"
+    description: "Pure cotton with intricate hand embroidery",
+    badge: "Bestseller"
   },
   { 
     name: "Long Mulmul Chikankari Kurti", 
@@ -15,7 +16,8 @@ const products = [
     category: "Long", 
     fabric: "Mulmul", 
     image: "images/long-mulmul.jpg",
-    description: "Soft mulmul fabric with delicate chikankari work"
+    description: "Soft mulmul fabric with delicate chikankari work",
+    badge: "New"
   },
   { 
     name: "Short Modal Chikankari Kurti", 
@@ -23,7 +25,8 @@ const products = [
     category: "Short", 
     fabric: "Modal", 
     image: "images/short-modal.jpg",
-    description: "Comfortable modal fabric with traditional embroidery"
+    description: "Comfortable modal fabric with traditional embroidery",
+    badge: "Sale"
   },
   // Add more products as needed
 ];
@@ -81,6 +84,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
+  // Scroll to top button functionality
+  const scrollTopBtn = document.querySelector('.scroll-top');
+  
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      scrollTopBtn.classList.add('visible');
+    } else {
+      scrollTopBtn.classList.remove('visible');
+    }
+  });
+  
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+  
   // Initial render
   renderProducts();
 });
@@ -107,6 +128,7 @@ function renderProducts() {
     return `
     <div class="card">
       <div class="card-img-container">
+        ${p.badge ? `<span class="card-badge">${p.badge}</span>` : ''}
         <img src="${p.image}" alt="${p.name}" loading="lazy">
       </div>
       <div class="card-body">
